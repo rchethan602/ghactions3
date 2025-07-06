@@ -26,8 +26,6 @@ jobs:
         run: echo "..."
   deploy:
     needs: test
-    runs-on: ubuntu-latest
-    steps:
-      - name: Output information
-        run: |        
-          echo "..."
+    uses: ./.github/workflows/reusable.yml
+    with:
+      artifact-name: my-files
